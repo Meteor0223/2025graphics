@@ -22,16 +22,16 @@ void draw(){
 }
 void keyPressed(){//小心中文輸入會卡住
   if(key=='s'||key=='S'){//按下按下s存檔
+     println("beginShape();");
      for(int I=0;I<xx.size();I++){
         ArrayList<Integer> x=xx.get(I);
         ArrayList<Integer> y=yy.get(I);
-        println("beginShape();");
         for(int i=1;i<x.size();i++){
           println("  vertex("+x.get(i)+","+y.get(i)+");");
           //改在keypressed()按下s或S時全部印出來
         }
-        println("endShape();");
      }
+     println("endShape();");
   }
 }
 void mouseDragged(){
